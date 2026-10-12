@@ -26,7 +26,7 @@ from i18n import L, FORMATS, BRAND, ORDER  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SITE = os.environ.get("SITE_URL", "https://jaulentmart-hash.github.io/ai-to-anki/")
-VERSION = "2"
+VERSION = "3"
 
 FONTS = "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap"
 
