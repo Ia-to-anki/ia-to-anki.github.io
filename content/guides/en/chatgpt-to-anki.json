@@ -1,0 +1,41 @@
+{
+  "title": "ChatGPT to Anki — turn ChatGPT flashcards into an Anki deck",
+  "description": "ChatGPT to Anki: paste the flashcards ChatGPT wrote and download a ready-to-import Anki deck (.apkg). Tables, math, cloze and tags handled. Free, no account.",
+  "h1": "ChatGPT to Anki: from ChatGPT's answer to a deck you can study",
+  "sub": "ChatGPT is quick at turning notes into questions, but Anki can't read a chat answer. Paste it above and download a clean .apkg file for Anki, AnkiDroid or AnkiMobile.",
+  "nav": "ChatGPT to Anki",
+  "sections": [
+    {
+      "h2": "Ask ChatGPT for cards in a format that survives",
+      "paragraphs": [
+        "Open a new chat, paste the prompt shown on this page, then add your material: lecture notes, a textbook section, a transcript or a list of words. The prompt asks for one card per block, written as \"Question:\" then \"Answer:\", with a blank line between cards. That layout is easy for ChatGPT to follow consistently and easy for the tool to read.",
+        "Keep one idea per card. Short cards are faster to review, and when ChatGPT gets something wrong you only have one line to fix or delete. For long documents, work one section at a time so the answer is not cut short, and make one deck per chapter if that suits the way you study."
+      ],
+      "list": [
+        "Fill-in-the-blank cards: ask for {{c1::hidden text}} on a single line.",
+        "Formulas: $…$ and $$…$$ are converted to Anki's \\( … \\) and \\[ … \\]; formulas already written with \\( … \\) are kept.",
+        "Tags: type them in the Tags field before downloading and they are added to every card."
+      ]
+    },
+    {
+      "h2": "Paste the whole answer, then check the preview",
+      "paragraphs": [
+        "Use the copy button under ChatGPT's message and paste everything into the box above. You don't need to delete the opening sentence or the closing offer to make more cards: text that isn't a card is ignored.",
+        "ChatGPT doesn't always follow the requested layout. If it answers with a Markdown table, a \"term — definition\" list, CSV lines or JSON, the tool recognises those too and shows which format it detected. Bold and italics written in Markdown become real formatting, and a question that appears twice is only kept once. Remove any card you don't want with one click, name the deck and download the .apkg file."
+      ]
+    },
+    {
+      "h2": "Import into Anki",
+      "paragraphs": [
+        "On a computer, double-click the file and Anki creates the deck. On Android, open it with AnkiDroid; on iPhone and iPad, with AnkiMobile. Tick \"Also create reversed cards\" if you want each basic card in both directions, which is handy for vocabulary. Cloze lines become cloze notes, with one card per number.",
+        "Everything happens in your browser. What you paste is not sent to a server, so you can use it with private course notes."
+      ]
+    },
+    {
+      "h2": "Why not use Anki's text import?",
+      "paragraphs": [
+        "Anki can import a text file, but you have to save ChatGPT's answer to a file, choose the separator, map the fields and then fix the formulas that show dollar signs. Copying cards one by one is slower still. Here the note types, the fields and the math conversion are done for you, and the file opens the same way on every Anki app."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Gemini to Anki — turn Gemini flashcards into an Anki deck",
+  "description": "Gemini to Anki: paste the flashcards Google Gemini wrote and download an Anki deck (.apkg) ready to import. Math, cloze cards and tags fixed. Free, no account.",
+  "h1": "Gemini to Anki: turn Gemini's flashcards into a real deck",
+  "sub": "Gemini can write a full set of flashcards from your notes in seconds. Paste its answer above and get a clean .apkg file that opens in Anki, AnkiDroid and AnkiMobile.",
+  "nav": "Gemini to Anki",
+  "sections": [
+    {
+      "h2": "Getting usable flashcards from Gemini",
+      "paragraphs": [
+        "Start a new conversation in Gemini, paste the prompt from this page and add the material you want to learn: class notes, a chapter, a transcript or a vocabulary list. The prompt asks for \"Question:\" and \"Answer:\" blocks separated by a blank line, which keeps the output predictable.",
+        "Without clear instructions, Gemini often answers with headings, bullet points and a table mixed together. That is pleasant to read in the chat but hard to import. Asking for a fixed layout, one idea per card and short answers gives you cards that need little cleaning."
+      ],
+      "list": [
+        "Split long documents into parts and ask for cards one part at a time.",
+        "Ask for formulas between $…$; the tool converts them so Anki's MathJax displays them.",
+        "For fill-in-the-blank cards, ask for one line per card with {{c1::…}} around the hidden part."
+      ]
+    },
+    {
+      "h2": "From Gemini's answer to an .apkg file",
+      "paragraphs": [
+        "Copy Gemini's whole response and paste it into the box at the top of this page. Introductions such as \"Here are your flashcards:\" and code fences are stripped, and lines that are not cards are skipped.",
+        "If Gemini ignored the layout and produced a Markdown table instead, that works as well: the first column becomes the front and the rest becomes the back, and a column named \"Tags\" is read as tags. Glossary lines such as \"term — definition\", CSV, tab-separated lines and JSON are also recognised. Check the preview, delete the cards you don't need, choose a deck name and download."
+      ]
+    },
+    {
+      "h2": "Opening the deck",
+      "paragraphs": [
+        "Double-click the downloaded file on a computer to import it into Anki. On a phone, open it with AnkiDroid on Android or AnkiMobile on iPhone and iPad. The deck uses its own note types, so your existing note types are not changed.",
+        "The deck is built entirely in your browser, on your device. Nothing you paste is uploaded, and there is no account to create and no limit on the number of cards."
+      ]
+    },
+    {
+      "h2": "A few tips for better cards",
+      "paragraphs": [
+        "Read the cards before you study them. Gemini, like any assistant, can be confidently wrong, and a bad card is easier to delete now than to unlearn later. Prefer questions that make you recall something over cards that only ask you to recognise it, and keep lists short: three items per card are easier to remember than ten."
+      ]
+    }
+  ]
+}

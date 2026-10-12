@@ -7,8 +7,8 @@ Guide pages to publish, in order. Two per weekly run. Slugs stay in English in e
 - [x] en/csv-to-anki
 - [x] fr/claude-to-anki
 - [x] fr/anki-mathjax-dollar-signs
-- [ ] en/chatgpt-to-anki
-- [ ] en/gemini-to-anki
+- [x] en/chatgpt-to-anki
+- [x] en/gemini-to-anki
 - [ ] es/claude-to-anki
 - [ ] pt/claude-to-anki
 - [ ] de/claude-to-anki

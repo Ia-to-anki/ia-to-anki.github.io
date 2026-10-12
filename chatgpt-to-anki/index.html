@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ChatGPT to Anki — turn ChatGPT flashcards into an Anki deck</title>
+<meta name="description" content="ChatGPT to Anki: paste the flashcards ChatGPT wrote and download a ready-to-import Anki deck (.apkg). Tables, math, cloze and tags handled. Free, no account.">
+<link rel="canonical" href="https://jaulentmart-hash.github.io/ai-to-anki/chatgpt-to-anki/">
+<link rel="alternate" hreflang="en" href="https://jaulentmart-hash.github.io/ai-to-anki/chatgpt-to-anki/">
+<link rel="alternate" hreflang="x-default" href="https://jaulentmart-hash.github.io/ai-to-anki/chatgpt-to-anki/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ChatGPT to Anki — turn ChatGPT flashcards into an Anki deck">
+<meta property="og:description" content="ChatGPT to Anki: paste the flashcards ChatGPT wrote and download a ready-to-import Anki deck (.apkg). Tables, math, cloze and tags handled. Free, no account.">
+<meta property="og:url" content="https://jaulentmart-hash.github.io/ai-to-anki/chatgpt-to-anki/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT to Anki: from ChatGPT's answer to a deck you can study", "description": "ChatGPT to Anki: paste the flashcards ChatGPT wrote and download a ready-to-import Anki deck (.apkg). Tables, math, cloze and tags handled. Free, no account.", "inLanguage": "en", "url": "https://jaulentmart-hash.github.io/ai-to-anki/chatgpt-to-anki/", "dateModified": "2026-10-12"}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "AI to Anki", "url": "https://jaulentmart-hash.github.io/ai-to-anki/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "en", "description": "Paste flashcards from ChatGPT, Claude or Gemini and download a clean Anki deck (.apkg): math, cloze and tags fixed automatically. Free, no account, runs in your browser.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AI to Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../chatgpt-to-anki/" aria-current="page" lang="en">English</a><a href="../fr/" lang="fr">Français</a><a href="../es/" lang="es">Español</a><a href="../pt/" lang="pt-BR">Português</a><a href="../de/" lang="de">Deutsch</a><a href="../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>ChatGPT to Anki: from ChatGPT&#x27;s answer to a deck you can study</h1>
+    <p>ChatGPT is quick at turning notes into questions, but Anki can&#x27;t read a chat answer. Paste it above and download a clean .apkg file for Anki, AnkiDroid or AnkiMobile.</p>
+    <ul class="badges"><li>Free, no sign-up</li><li>Runs in your browser</li><li>Math and cloze fixed automatically</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>Paste the AI output</h2>
+        <div><button type="button" class="linkbtn" id="example">Try an example</button><button type="button" class="linkbtn" id="clear">Clear</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="Paste the AI output" placeholder="Q: What is the powerhouse of the cell?
+A: The mitochondria
+
+Q: …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Deck name<input type="text" id="deck" placeholder="AI flashcards" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (optional)<input type="text" id="tags" placeholder="biology chapter-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>Convert $…$ math to Anki&#x27;s format</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Also create reversed cards (back → front)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Check your cards</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>Download .apkg</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">On a computer, double-click the file. On a phone, open it with AnkiDroid or AnkiMobile.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>The prompt that gets clean results</h2>
+    <p>Paste this into ChatGPT, Claude or any other AI, then add your notes. The AI will answer in a format this tool reads perfectly.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Turn the notes below into flashcards.
+Rules:
+- One card per block, with a blank line between cards.
+- Write each card exactly like this:
+Q: the question
+A: the answer
+- Keep answers short: one idea per card.
+- Write math with $...$.
+- For a fill-in-the-blank card, write one line with the hidden part as {{c1::hidden part}}, without Q: or A:.
+
+Notes:
+[paste your notes here]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Copy the prompt</button>
+    </div>
+  </section>
+<section class="block"><h2>Ask ChatGPT for cards in a format that survives</h2><p>Open a new chat, paste the prompt shown on this page, then add your material: lecture notes, a textbook section, a transcript or a list of words. The prompt asks for one card per block, written as &quot;Question:&quot; then &quot;Answer:&quot;, with a blank line between cards. That layout is easy for ChatGPT to follow consistently and easy for the tool to read.</p><p>Keep one idea per card. Short cards are faster to review, and when ChatGPT gets something wrong you only have one line to fix or delete. For long documents, work one section at a time so the answer is not cut short, and make one deck per chapter if that suits the way you study.</p><ul class="plain"><li>Fill-in-the-blank cards: ask for {{c1::hidden text}} on a single line.</li><li>Formulas: $…$ and $$…$$ are converted to Anki&#x27;s \( … \) and \[ … \]; formulas already written with \( … \) are kept.</li><li>Tags: type them in the Tags field before downloading and they are added to every card.</li></ul></section><section class="block"><h2>Paste the whole answer, then check the preview</h2><p>Use the copy button under ChatGPT&#x27;s message and paste everything into the box above. You don&#x27;t need to delete the opening sentence or the closing offer to make more cards: text that isn&#x27;t a card is ignored.</p><p>ChatGPT doesn&#x27;t always follow the requested layout. If it answers with a Markdown table, a &quot;term — definition&quot; list, CSV lines or JSON, the tool recognises those too and shows which format it detected. Bold and italics written in Markdown become real formatting, and a question that appears twice is only kept once. Remove any card you don&#x27;t want with one click, name the deck and download the .apkg file.</p></section><section class="block"><h2>Import into Anki</h2><p>On a computer, double-click the file and Anki creates the deck. On Android, open it with AnkiDroid; on iPhone and iPad, with AnkiMobile. Tick &quot;Also create reversed cards&quot; if you want each basic card in both directions, which is handy for vocabulary. Cloze lines become cloze notes, with one card per number.</p><p>Everything happens in your browser. What you paste is not sent to a server, so you can use it with private course notes.</p></section><section class="block"><h2>Why not use Anki&#x27;s text import?</h2><p>Anki can import a text file, but you have to save ChatGPT&#x27;s answer to a file, choose the separator, map the fields and then fix the formulas that show dollar signs. Copying cards one by one is slower still. Here the note types, the fields and the math conversion are done for you, and the file opens the same way on every Anki app.</p></section>
+
+  <section class="block">
+    <h2>Questions</h2>
+    <div class="faq"><details><summary>Is AI to Anki free?</summary><p>Yes. No account, no card limit, no watermark.</p></details><details><summary>Is my text sent to a server?</summary><p>No. The deck is built inside your browser, on your device. Nothing you paste leaves your computer or phone.</p></details><details><summary>Why do my formulas show dollar signs in Anki?</summary><p>Anki&#x27;s MathJax only reads \( … \) and \[ … \], while AI tools usually write $…$. This tool converts them for you and leaves prices like $5 alone.</p></details><details><summary>Does it work on my phone?</summary><p>Yes. Open the .apkg file with AnkiDroid on Android or AnkiMobile on iPhone and iPad. On a computer, double-click it to open it in Anki.</p></details><details><summary>Can I make cloze (fill-in-the-blank) cards?</summary><p>Yes. Keep the {{c1::…}} syntax: each line with a cloze becomes a cloze note, with one card per number.</p></details><details><summary>Which AI works best?</summary><p>Any of them: ChatGPT, Claude, Gemini, Mistral, Copilot or DeepSeek. The format matters more than the model, so start with the prompt above.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    <nav class="guides" aria-label="Guides"><h2>Guides</h2><ul><li><a href="../anki-mathjax-dollar-signs/">Fix $ math in Anki</a></li><li><a href="../claude-to-anki/">Claude to Anki</a></li><li><a href="../csv-to-anki/">CSV to Anki</a></li><li><a href="../gemini-to-anki/">Gemini to Anki</a></li></ul></nav>
+    <p><a href="../">AI to Anki</a></p>
+    <p>Everything happens in your browser: your text is never uploaded.</p>
+    <p>AI to Anki is an independent tool. It is not affiliated with Anki, AnkiWeb, OpenAI, Anthropic or Google.</p>
+  </footer>
+</div>
+<script src="../assets/vendor/sql-wasm.js"></script>
+<script src="../assets/vendor/jszip.min.js"></script>
+<script src="../assets/parse.js?v=2"></script>
+<script src="../assets/apkg.js?v=2"></script>
+<script>window.I18N = {"status": "{n} cards · format detected: {format}", "remove": "Remove this card", "download": "Download {n} cards (.apkg)", "downloadEmpty": "Download .apkg", "building": "Building your deck…", "done": "Done: {n} cards. Open the file to import it into Anki.", "error": "The file could not be built. Reload the page and try again.", "emptyPreview": "Your cards appear here as soon as you paste.", "unknown": "No cards found. Use the prompt below so the AI answers in a format this tool can read.", "copy": "Copy the prompt", "copied": "Copied", "deckDefault": "AI flashcards", "example": "Q: What is the formula for kinetic energy?\nA: $E_k = \\frac{1}{2}mv^2$, where *m* is mass and *v* is velocity.\n\nQ: What are the 3 main parts of a neuron?\nA:\n- Dendrites\n- Cell body (soma)\n- Axon\n\nQ: What does **ATP** stand for?\nA: Adenosine triphosphate\n\n{{c1::Mitochondria}} produce most of the cell's {{c2::ATP}}.", "formats": {"json": "JSON", "table": "Markdown table", "qa": "Question / Answer", "cloze": "Cloze", "tab": "Tab-separated", "semicolon": "Semicolon-separated", "pipe": "Pipe-separated", "double-colon": "Front :: Back", "csv": "CSV", "glossary-dash": "Term — definition", "glossary-colon": "Term: definition", "paragraphs": "Paragraphs"}}; window.ASSET_BASE = "../assets/";</script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>
