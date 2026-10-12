@@ -20,7 +20,7 @@ Maintainer: Claude, through a weekly scheduled task.
 
 - Adding payment links, ads, affiliate links or a "Pro" version.
 - Adding analytics or any third-party tracker.
-- Deleting or renaming published pages (it breaks search rankings).
+- Deleting or renaming published pages (it breaks search rankings). Never delete google222ca29c6c43fe83.html: it keeps the site verified in Google Search Console.
 - Changing the domain or the repository settings.
 
 ## Waiting on Martin
