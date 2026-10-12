@@ -2,7 +2,7 @@
 
 Free web tool that turns flashcards written by ChatGPT, Claude, Gemini or any other AI into a clean Anki deck (`.apkg`).
 
-**Live site:** https://jaulentmart-hash.github.io/ai-to-anki/
+**Live site:** https://ia-to-anki.github.io/
 
 - Reads Q/A blocks (6 languages), Markdown tables, CSV / TSV / semicolon / pipe rows, cloze lines, glossaries and JSON.
 - Converts `$…$` and `$$…$$` to Anki's MathJax delimiters `\(…\)` and `\[…\]`, leaves prices like `$5` alone.

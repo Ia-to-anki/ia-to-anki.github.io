@@ -1,6 +1,6 @@
 # Operations playbook
 
-Owner: Martin (repository owner, receives any revenue).
+Owner: Martin (owner of the Ia-to-anki GitHub organization, receives any revenue). Live site: https://ia-to-anki.github.io/
 Maintainer: Claude, through a weekly scheduled task.
 
 ## Weekly run
