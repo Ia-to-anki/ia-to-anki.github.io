@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anki affiche des dollars au lieu des formules ? La solution</title>
+<meta name="description" content="Anki affiche des dollars au lieu de vos formules ? Son MathJax ne lit pas $…$. Comprenez pourquoi et convertissez les formules de l&#x27;IA en \( … \), gratuitement.">
+<link rel="canonical" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/anki-mathjax-dollar-signs/">
+<link rel="alternate" hreflang="en" href="https://jaulentmart-hash.github.io/ai-to-anki/anki-mathjax-dollar-signs/">
+<link rel="alternate" hreflang="fr" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/anki-mathjax-dollar-signs/">
+<link rel="alternate" hreflang="x-default" href="https://jaulentmart-hash.github.io/ai-to-anki/anki-mathjax-dollar-signs/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anki affiche des dollars au lieu des formules ? La solution">
+<meta property="og:description" content="Anki affiche des dollars au lieu de vos formules ? Son MathJax ne lit pas $…$. Comprenez pourquoi et convertissez les formules de l&#x27;IA en \( … \), gratuitement.">
+<meta property="og:url" content="https://jaulentmart-hash.github.io/ai-to-anki/fr/anki-mathjax-dollar-signs/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css?v=2">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Pourquoi Anki affiche des dollars au lieu de vos formules", "description": "Anki affiche des dollars au lieu de vos formules ? Son MathJax ne lit pas $…$. Comprenez pourquoi et convertissez les formules de l'IA en \\( … \\), gratuitement.", "inLanguage": "fr", "url": "https://jaulentmart-hash.github.io/ai-to-anki/fr/anki-mathjax-dollar-signs/", "dateModified": "2026-10-12"}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "IA vers Anki", "url": "https://jaulentmart-hash.github.io/ai-to-anki/fr/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "fr", "description": "Collez les flashcards générées par ChatGPT, Claude ou Gemini et téléchargez un paquet Anki (.apkg) propre : formules, textes à trous et tags corrigés. Gratuit, sans compte.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../fr/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IA vers Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../../anki-mathjax-dollar-signs/" lang="en">English</a><a href="../../fr/anki-mathjax-dollar-signs/" aria-current="page" lang="fr">Français</a><a href="../../es/" lang="es">Español</a><a href="../../pt/" lang="pt-BR">Português</a><a href="../../de/" lang="de">Deutsch</a><a href="../../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Pourquoi Anki affiche des dollars au lieu de vos formules</h1>
+    <p>Les IA écrivent les maths entre $…$, alors que le MathJax d&#x27;Anki attend \( … \) et \[ … \]. Collez vos cartes ci-dessus : les formules sont converties avant d&#x27;arriver dans Anki.</p>
+    <ul class="badges"><li>Gratuit, sans inscription</li><li>Tout se passe dans votre navigateur</li><li>Formules et textes à trous corrigés</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>Collez la réponse de l&#x27;IA</h2>
+        <div><button type="button" class="linkbtn" id="example">Voir un exemple</button><button type="button" class="linkbtn" id="clear">Effacer</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="Collez la réponse de l&#x27;IA" placeholder="Question : Quel organite produit l&#x27;ATP ?
+Réponse : La mitochondrie
+
+Question : …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Nom du paquet<input type="text" id="deck" placeholder="Flashcards IA" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (facultatif)<input type="text" id="tags" placeholder="biologie chapitre-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>Convertir les formules $…$ au format Anki</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Créer aussi les cartes inversées (verso → recto)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Vérifiez vos cartes</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>Télécharger le .apkg</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">Sur ordinateur, double-cliquez sur le fichier. Sur téléphone, ouvrez-le avec AnkiDroid ou AnkiMobile.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>Le prompt qui donne des cartes propres</h2>
+    <p>Collez-le dans ChatGPT, Claude ou une autre IA, puis ajoutez vos notes. L&#x27;IA répondra dans un format que l&#x27;outil lit parfaitement.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Transforme les notes ci-dessous en flashcards.
+Règles :
+- Une carte par bloc, avec une ligne vide entre deux cartes.
+- Écris chaque carte exactement ainsi :
+Question : la question
+Réponse : la réponse
+- Réponses courtes : une seule idée par carte.
+- Écris les formules avec $...$.
+- Pour une carte à trous, écris une seule ligne avec la partie cachée sous la forme {{c1::partie cachée}}, sans « Question : » ni « Réponse : ».
+
+Notes :
+[colle tes notes ici]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Copier le prompt</button>
+    </div>
+  </section>
+<section class="block"><h2>D&#x27;où vient le problème</h2><p>Anki affiche les mathématiques avec MathJax. Il reconnaît \( … \) pour une formule dans le texte et \[ … \] pour une formule centrée sur sa propre ligne. Les dollars ne sont pas activés par défaut : une carte qui contient $E = mc^2$ montre donc les deux dollars et le code brut, au lieu d&#x27;une jolie formule.</p><p>ChatGPT, Claude, Gemini et la plupart des assistants écrivent pourtant les formules avec des dollars, parce que c&#x27;est la convention habituelle du Markdown et de LaTeX. Dans la fenêtre de chat, tout s&#x27;affiche bien ; une fois copié dans Anki, plus rien ne fonctionne. Tout le souci vient de ce décalage entre deux conventions.</p></section><section class="block"><h2>La solution avant l&#x27;import</h2><p>Collez la réponse de l&#x27;IA dans l&#x27;outil de cette page en laissant cochée l&#x27;option « Convertir les formules $…$ au format Anki ». Chaque $…$ devient \( … \) et chaque $$…$$ devient \[ … \]. Vérifiez l&#x27;aperçu, puis téléchargez le fichier .apkg : les formules s&#x27;affichent correctement dans Anki, AnkiDroid et AnkiMobile.</p><p>L&#x27;outil évite de transformer ce qui n&#x27;est pas une formule. Un montant comme $5 ou $10 reste tel quel, et les formules déjà écrites avec \( … \) ne sont pas modifiées. Si vos cartes ne contiennent aucune formule et beaucoup de prix, vous pouvez aussi décocher l&#x27;option.</p><ul class="plain"><li>Dans le texte : $x^2$ → \(x^2\)</li><li>Sur sa propre ligne : $$\int_0^1 x\,dx$$ → \[\int_0^1 x\,dx\]</li><li>Déjà au bon format : \( … \) est conservé.</li></ul></section><section class="block"><h2>Éviter le problème dès la génération</h2><p>Le prompt proposé sur cette page demande à l&#x27;IA d&#x27;écrire les formules avec $…$ et une carte par bloc. Ce n&#x27;est pas une erreur : c&#x27;est le format que les IA respectent le plus régulièrement, et l&#x27;outil se charge de la conversion. Vous gardez des formules lisibles dans la conversation et correctes dans Anki.</p></section><section class="block"><h2>Et pour les cartes déjà dans votre collection ?</h2><p>Cet outil crée de nouveaux paquets ; il ne modifie pas les cartes déjà présentes dans Anki. Pour celles-là, la fonction Rechercher et remplacer du navigateur d&#x27;Anki accepte les expressions régulières. Elle est efficace, mais un motif mal écrit peut abîmer des centaines de notes d&#x27;un coup : faites une sauvegarde de votre collection avant d&#x27;essayer, et testez d&#x27;abord sur quelques cartes.</p></section>
+
+  <section class="block">
+    <h2>Questions fréquentes</h2>
+    <div class="faq"><details><summary>L&#x27;outil est-il gratuit ?</summary><p>Oui. Pas de compte, pas de limite de cartes, pas de filigrane.</p></details><details><summary>Mon texte est-il envoyé sur un serveur ?</summary><p>Non. Le paquet est créé dans votre navigateur, sur votre appareil. Rien de ce que vous collez ne quitte votre ordinateur ou votre téléphone.</p></details><details><summary>Pourquoi mes formules affichent-elles des dollars dans Anki ?</summary><p>Le MathJax d&#x27;Anki ne lit que \( … \) et \[ … \], alors que les IA écrivent souvent $…$. L&#x27;outil les convertit pour vous et laisse les prix comme $5 intacts.</p></details><details><summary>Ça marche sur téléphone ?</summary><p>Oui. Ouvrez le fichier .apkg avec AnkiDroid sur Android ou AnkiMobile sur iPhone et iPad. Sur ordinateur, double-cliquez dessus pour l&#x27;ouvrir dans Anki.</p></details><details><summary>Puis-je créer des cartes à trous ?</summary><p>Oui. Gardez la syntaxe {{c1::…}} : chaque ligne qui en contient devient une note à trous, avec une carte par numéro.</p></details><details><summary>Quelle IA donne les meilleurs résultats ?</summary><p>Toutes conviennent : ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. Le format compte plus que le modèle, alors commencez par le prompt ci-dessus.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    <nav class="guides" aria-label="Guides"><h2>Guides</h2><ul><li><a href="../../fr/claude-to-anki/">Claude vers Anki</a></li></ul></nav>
+    <p><a href="../../fr/">IA vers Anki</a></p>
+    <p>Tout se passe dans votre navigateur : votre texte n&#x27;est jamais envoyé.</p>
+    <p>IA vers Anki est un outil indépendant, sans lien avec Anki, AnkiWeb, OpenAI, Anthropic ou Google.</p>
+  </footer>
+</div>
+<script src="../../assets/vendor/sql-wasm.js"></script>
+<script src="../../assets/vendor/jszip.min.js"></script>
+<script src="../../assets/parse.js?v=2"></script>
+<script src="../../assets/apkg.js?v=2"></script>
+<script>window.I18N = {"status": "{n} cartes · format détecté : {format}", "remove": "Supprimer cette carte", "download": "Télécharger {n} cartes (.apkg)", "downloadEmpty": "Télécharger le .apkg", "building": "Création du paquet…", "done": "C'est prêt : {n} cartes. Ouvrez le fichier pour l'importer dans Anki.", "error": "Le fichier n'a pas pu être créé. Rechargez la page et réessayez.", "emptyPreview": "Vos cartes apparaissent ici dès que vous collez du texte.", "unknown": "Aucune carte trouvée. Utilisez le prompt ci-dessous pour que l'IA réponde dans un format lisible par l'outil.", "copy": "Copier le prompt", "copied": "Copié", "deckDefault": "Flashcards IA", "example": "Question : Quelle est la formule de l'énergie cinétique ?\nRéponse : $E_c = \\frac{1}{2}mv^2$, où *m* est la masse et *v* la vitesse.\n\nQuestion : Quelles sont les 3 parties principales d'un neurone ?\nRéponse :\n- Les dendrites\n- Le corps cellulaire\n- L'axone\n\nQuestion : Que signifie **ATP** ?\nRéponse : Adénosine triphosphate\n\nLes {{c1::mitochondries}} produisent l'essentiel de l'{{c2::ATP}} de la cellule.", "formats": {"json": "JSON", "table": "Tableau Markdown", "qa": "Question / Réponse", "cloze": "Texte à trous", "tab": "Séparé par tabulations", "semicolon": "Séparé par points-virgules", "pipe": "Séparé par barres", "double-colon": "Recto :: Verso", "csv": "CSV", "glossary-dash": "Terme — définition", "glossary-colon": "Terme : définition", "paragraphs": "Paragraphes"}}; window.ASSET_BASE = "../../assets/";</script>
+<script src="../../assets/app.js?v=2"></script>
+</body>
+</html>

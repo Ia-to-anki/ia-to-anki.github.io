@@ -1,0 +1,41 @@
+{
+  "title": "Claude vers Anki : transformer ses flashcards en paquet Anki",
+  "description": "Claude vers Anki : collez les flashcards écrites par Claude et téléchargez un paquet Anki (.apkg) prêt à importer, formules et textes à trous compris. Gratuit.",
+  "h1": "Claude vers Anki : de la réponse de Claude à un paquet en un clic",
+  "sub": "Claude rédige de bonnes flashcards, mais Anki ne sait pas lire une réponse de chat. Collez-la ci-dessus : vous récupérez un fichier .apkg qui s'ouvre dans Anki, AnkiDroid ou AnkiMobile.",
+  "nav": "Claude vers Anki",
+  "sections": [
+    {
+      "h2": "Obtenir des flashcards propres avec Claude",
+      "paragraphs": [
+        "Ouvrez une nouvelle conversation avec Claude et collez le prompt proposé sur cette page, puis vos notes de cours, la transcription d'un enregistrement ou un chapitre de manuel. Le prompt demande un format simple, « Question : » puis « Réponse : », avec une ligne vide entre deux cartes. C'est le format que l'outil lit le plus facilement.",
+        "Demandez une seule idée par carte. Une carte courte se révise plus vite, et si Claude se trompe, vous n'avez qu'une ligne à corriger ou à supprimer. Pour un document long, travaillez chapitre par chapitre : les réponses restent complètes et vous pouvez créer un paquet par chapitre."
+      ],
+      "list": [
+        "Cartes à trous : demandez à Claude d'écrire la partie cachée sous la forme {{c1::…}}, sur une seule ligne.",
+        "Formules : demandez-les entre $…$ ; l'outil les convertit au format \\( … \\) qu'Anki affiche.",
+        "Tags : ajoutez-les dans le champ « Tags » avant le téléchargement, ils s'appliquent à toutes les cartes."
+      ]
+    },
+    {
+      "h2": "Coller la réponse et vérifier les cartes",
+      "paragraphs": [
+        "Quand Claude a terminé, utilisez le bouton de copie sous son message et collez toute la réponse dans la zone en haut de la page. Inutile d'enlever la phrase d'introduction ou la conclusion : le texte qui n'est pas une carte est ignoré.",
+        "L'aperçu affiche chaque carte telle qu'elle sera importée, avec le format détecté. Si Claude a répondu sous forme de tableau Markdown, de liste « terme — définition », de CSV ou de JSON, l'outil le reconnaît aussi. Le gras et l'italique Markdown deviennent du vrai gras et du vrai italique, et les questions posées deux fois ne sont gardées qu'une fois. Supprimez d'un clic les cartes qui ne vous servent pas, choisissez le nom du paquet, puis téléchargez le fichier .apkg."
+      ]
+    },
+    {
+      "h2": "Importer dans Anki",
+      "paragraphs": [
+        "Sur ordinateur, double-cliquez sur le fichier : Anki l'ouvre et crée le paquet. Sur Android, ouvrez-le avec AnkiDroid ; sur iPhone et iPad, avec AnkiMobile. Si vous cochez l'option des cartes inversées, chaque carte simple donne aussi une carte dans l'autre sens, pratique pour le vocabulaire.",
+        "Tout est fait dans votre navigateur : le texte que vous collez n'est envoyé à aucun serveur."
+      ]
+    },
+    {
+      "h2": "Pourquoi ne pas copier les cartes à la main ?",
+      "paragraphs": [
+        "Recopier cinquante cartes une par une prend plus de temps que de les générer. L'import d'un fichier texte dans Anki fonctionne, mais il faut choisir le séparateur, faire correspondre les champs et réparer soi-même les formules qui s'affichent avec des dollars. Ici, le paquet, les types de notes et les formules sont gérés pour vous."
+      ]
+    }
+  ]
+}

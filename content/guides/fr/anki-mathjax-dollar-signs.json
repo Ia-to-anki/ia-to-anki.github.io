@@ -1,0 +1,40 @@
+{
+  "title": "Anki affiche des dollars au lieu des formules ? La solution",
+  "description": "Anki affiche des dollars au lieu de vos formules ? Son MathJax ne lit pas $…$. Comprenez pourquoi et convertissez les formules de l'IA en \\( … \\), gratuitement.",
+  "h1": "Pourquoi Anki affiche des dollars au lieu de vos formules",
+  "sub": "Les IA écrivent les maths entre $…$, alors que le MathJax d'Anki attend \\( … \\) et \\[ … \\]. Collez vos cartes ci-dessus : les formules sont converties avant d'arriver dans Anki.",
+  "nav": "Formules $ dans Anki",
+  "sections": [
+    {
+      "h2": "D'où vient le problème",
+      "paragraphs": [
+        "Anki affiche les mathématiques avec MathJax. Il reconnaît \\( … \\) pour une formule dans le texte et \\[ … \\] pour une formule centrée sur sa propre ligne. Les dollars ne sont pas activés par défaut : une carte qui contient $E = mc^2$ montre donc les deux dollars et le code brut, au lieu d'une jolie formule.",
+        "ChatGPT, Claude, Gemini et la plupart des assistants écrivent pourtant les formules avec des dollars, parce que c'est la convention habituelle du Markdown et de LaTeX. Dans la fenêtre de chat, tout s'affiche bien ; une fois copié dans Anki, plus rien ne fonctionne. Tout le souci vient de ce décalage entre deux conventions."
+      ]
+    },
+    {
+      "h2": "La solution avant l'import",
+      "paragraphs": [
+        "Collez la réponse de l'IA dans l'outil de cette page en laissant cochée l'option « Convertir les formules $…$ au format Anki ». Chaque $…$ devient \\( … \\) et chaque $$…$$ devient \\[ … \\]. Vérifiez l'aperçu, puis téléchargez le fichier .apkg : les formules s'affichent correctement dans Anki, AnkiDroid et AnkiMobile.",
+        "L'outil évite de transformer ce qui n'est pas une formule. Un montant comme $5 ou $10 reste tel quel, et les formules déjà écrites avec \\( … \\) ne sont pas modifiées. Si vos cartes ne contiennent aucune formule et beaucoup de prix, vous pouvez aussi décocher l'option."
+      ],
+      "list": [
+        "Dans le texte : $x^2$ → \\(x^2\\)",
+        "Sur sa propre ligne : $$\\int_0^1 x\\,dx$$ → \\[\\int_0^1 x\\,dx\\]",
+        "Déjà au bon format : \\( … \\) est conservé."
+      ]
+    },
+    {
+      "h2": "Éviter le problème dès la génération",
+      "paragraphs": [
+        "Le prompt proposé sur cette page demande à l'IA d'écrire les formules avec $…$ et une carte par bloc. Ce n'est pas une erreur : c'est le format que les IA respectent le plus régulièrement, et l'outil se charge de la conversion. Vous gardez des formules lisibles dans la conversation et correctes dans Anki."
+      ]
+    },
+    {
+      "h2": "Et pour les cartes déjà dans votre collection ?",
+      "paragraphs": [
+        "Cet outil crée de nouveaux paquets ; il ne modifie pas les cartes déjà présentes dans Anki. Pour celles-là, la fonction Rechercher et remplacer du navigateur d'Anki accepte les expressions régulières. Elle est efficace, mais un motif mal écrit peut abîmer des centaines de notes d'un coup : faites une sauvegarde de votre collection avant d'essayer, et testez d'abord sur quelques cartes."
+      ]
+    }
+  ]
+}
