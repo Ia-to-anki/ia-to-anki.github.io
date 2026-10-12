@@ -1,0 +1,25 @@
+{
+  "title": "CSV to Anki — convert a CSV or spreadsheet to an Anki deck",
+  "description": "Paste CSV, tab-separated or semicolon-separated cards and download an Anki deck (.apkg). Quotes, tags and math are handled. Free, runs in your browser.",
+  "h1": "CSV to Anki without the import settings",
+  "sub": "Paste rows from a CSV file, a spreadsheet or an AI answer. The separator is detected, quoted text is kept intact and you get a ready-to-open .apkg file.",
+  "nav": "CSV to Anki",
+  "sections": [
+    {
+      "h2": "What the tool reads",
+      "paragraphs": [
+        "Each row becomes a card: the first column is the front, the second the back. Commas, tabs, semicolons, vertical bars and \"::\" are recognised. Text in double quotes can contain the separator itself.",
+        "If the first row is a header such as Front, Back, Tags, it is skipped, and a Tags column is used as Anki tags. Rows copied straight from Excel, Google Sheets or Numbers arrive tab-separated, which works as is."
+      ]
+    },
+    {
+      "h2": "Tips for clean rows",
+      "list": [
+        "Keep one fact per row.",
+        "Use a third column for tags, separated by spaces.",
+        "Put a line break inside a cell by quoting the cell.",
+        "Check the preview: remove any row you don't want before downloading."
+      ]
+    }
+  ]
+}

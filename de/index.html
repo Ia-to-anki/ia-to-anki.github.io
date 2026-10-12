@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KI zu Anki — ChatGPT-Karteikarten in einen Anki-Stapel umwandeln</title>
+<meta name="description" content="Füge Karteikarten aus ChatGPT, Claude oder Gemini ein und lade einen sauberen Anki-Stapel (.apkg) herunter: Formeln, Lückentexte und Tags automatisch korrigiert. Kostenlos, ohne Konto.">
+<link rel="canonical" href="https://jaulentmart-hash.github.io/ai-to-anki/de/">
+<link rel="alternate" hreflang="en" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<link rel="alternate" hreflang="fr" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/">
+<link rel="alternate" hreflang="es" href="https://jaulentmart-hash.github.io/ai-to-anki/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://jaulentmart-hash.github.io/ai-to-anki/pt/">
+<link rel="alternate" hreflang="de" href="https://jaulentmart-hash.github.io/ai-to-anki/de/">
+<link rel="alternate" hreflang="it" href="https://jaulentmart-hash.github.io/ai-to-anki/it/">
+<link rel="alternate" hreflang="x-default" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KI zu Anki — ChatGPT-Karteikarten in einen Anki-Stapel umwandeln">
+<meta property="og:description" content="Füge Karteikarten aus ChatGPT, Claude oder Gemini ein und lade einen sauberen Anki-Stapel (.apkg) herunter: Formeln, Lückentexte und Tags automatisch korrigiert. Kostenlos, ohne Konto.">
+<meta property="og:url" content="https://jaulentmart-hash.github.io/ai-to-anki/de/">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "KI zu Anki", "url": "https://jaulentmart-hash.github.io/ai-to-anki/de/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "de", "description": "Füge Karteikarten aus ChatGPT, Claude oder Gemini ein und lade einen sauberen Anki-Stapel (.apkg) herunter: Formeln, Lückentexte und Tags automatisch korrigiert. Kostenlos, ohne Konto.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Ist das kostenlos?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Kein Konto, kein Kartenlimit, kein Wasserzeichen."}}, {"@type": "Question", "name": "Wird mein Text an einen Server geschickt?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Der Stapel wird in deinem Browser auf deinem Gerät erstellt. Nichts, was du einfügst, verlässt deinen Computer oder dein Handy."}}, {"@type": "Question", "name": "Warum zeigen meine Formeln in Anki Dollarzeichen?", "acceptedAnswer": {"@type": "Answer", "text": "Ankis MathJax liest nur \\( … \\) und \\[ … \\], KI-Tools schreiben aber meist $…$. Das Tool wandelt sie für dich um und lässt Preise wie $5 unverändert."}}, {"@type": "Question", "name": "Funktioniert das am Handy?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Öffne die .apkg-Datei mit AnkiDroid unter Android oder AnkiMobile auf iPhone und iPad. Am Computer genügt ein Doppelklick, um sie in Anki zu öffnen."}}, {"@type": "Question", "name": "Kann ich Lückentext-Karten erstellen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Behalte die Schreibweise {{c1::…}} bei: Jede Zeile damit wird zu einer Lückentext-Notiz, mit einer Karte pro Nummer."}}, {"@type": "Question", "name": "Welche KI funktioniert am besten?", "acceptedAnswer": {"@type": "Answer", "text": "Jede: ChatGPT, Claude, Gemini, Mistral, Copilot oder DeepSeek. Das Format ist wichtiger als das Modell, also starte mit dem Prompt oben."}}]}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../de/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>KI zu Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../" lang="en">English</a><a href="../fr/" lang="fr">Français</a><a href="../es/" lang="es">Español</a><a href="../pt/" lang="pt-BR">Português</a><a href="../de/" aria-current="page" lang="de">Deutsch</a><a href="../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>KI-Karteikarten mit einem Klick in einen Anki-Stapel verwandeln</h1>
+    <p>Füge ein, was ChatGPT, Claude oder Gemini geschrieben hat. Du bekommst eine saubere .apkg-Datei mit funktionierenden Formeln, Lückentexten und Tags. Kostenlos, ohne Konto.</p>
+    <ul class="badges"><li>Kostenlos, ohne Anmeldung</li><li>Läuft in deinem Browser</li><li>Formeln und Lückentexte korrigiert</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>KI-Antwort einfügen</h2>
+        <div><button type="button" class="linkbtn" id="example">Beispiel ansehen</button><button type="button" class="linkbtn" id="clear">Leeren</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="KI-Antwort einfügen" placeholder="Frage: Welches Organell produziert ATP?
+Antwort: Das Mitochondrium
+
+Frage: …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Name des Stapels<input type="text" id="deck" placeholder="KI-Karteikarten" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (optional)<input type="text" id="tags" placeholder="biologie kapitel-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>$…$-Formeln ins Anki-Format umwandeln</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Auch umgekehrte Karten erstellen (Rückseite → Vorderseite)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Karten prüfen</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>.apkg herunterladen</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">Am Computer: Doppelklick auf die Datei. Am Handy: mit AnkiDroid oder AnkiMobile öffnen.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>Der Prompt für saubere Karten</h2>
+    <p>Füge ihn in ChatGPT, Claude oder eine andere KI ein und hänge deine Notizen an. Die KI antwortet dann in einem Format, das das Tool perfekt liest.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Mach aus den Notizen unten Karteikarten.
+Regeln:
+- Eine Karte pro Block, mit einer Leerzeile zwischen den Karten.
+- Schreib jede Karte genau so:
+Frage: die Frage
+Antwort: die Antwort
+- Kurze Antworten: eine Idee pro Karte.
+- Schreib Formeln mit $...$.
+- Für eine Lückentext-Karte schreib eine einzelne Zeile, in der der versteckte Teil als {{c1::versteckter Teil}} steht, ohne „Frage:“ oder „Antwort:“.
+
+Notizen:
+[füge hier deine Notizen ein]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Prompt kopieren</button>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>So funktioniert&#x27;s</h2>
+    <ol class="steps"><li><h3>Frag deine KI</h3><p>Nutze den Prompt oben und füge deine Notizen, ein Vorlesungsskript oder ein Kapitel ein.</p></li><li><h3>Antwort hier einfügen</h3><p>Das Tool liest die Karten, korrigiert die Formeln und zeigt eine Vorschau. Entferne, was du nicht brauchst.</p></li><li><h3>In Anki importieren</h3><p>Lade die .apkg-Datei herunter und öffne sie. Dein Stapel erscheint in Anki und ist bereit zum Lernen.</p></li></ol>
+  </section>
+
+  <section class="block">
+    <h2>Unterstützte Formate</h2>
+    <ul class="formats"><li>Frage / Antwort-Blöcke</li><li>Markdown-Tabellen</li><li>Lückentext {{c1::…}}</li><li>CSV und Tabulatoren</li><li>Semikolon oder senkrechter Strich</li><li>Begriff — Definition</li><li>JSON</li><li>Fragen in 6 Sprachen</li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Häufige Fragen</h2>
+    <div class="faq"><details><summary>Ist das kostenlos?</summary><p>Ja. Kein Konto, kein Kartenlimit, kein Wasserzeichen.</p></details><details><summary>Wird mein Text an einen Server geschickt?</summary><p>Nein. Der Stapel wird in deinem Browser auf deinem Gerät erstellt. Nichts, was du einfügst, verlässt deinen Computer oder dein Handy.</p></details><details><summary>Warum zeigen meine Formeln in Anki Dollarzeichen?</summary><p>Ankis MathJax liest nur \( … \) und \[ … \], KI-Tools schreiben aber meist $…$. Das Tool wandelt sie für dich um und lässt Preise wie $5 unverändert.</p></details><details><summary>Funktioniert das am Handy?</summary><p>Ja. Öffne die .apkg-Datei mit AnkiDroid unter Android oder AnkiMobile auf iPhone und iPad. Am Computer genügt ein Doppelklick, um sie in Anki zu öffnen.</p></details><details><summary>Kann ich Lückentext-Karten erstellen?</summary><p>Ja. Behalte die Schreibweise {{c1::…}} bei: Jede Zeile damit wird zu einer Lückentext-Notiz, mit einer Karte pro Nummer.</p></details><details><summary>Welche KI funktioniert am besten?</summary><p>Jede: ChatGPT, Claude, Gemini, Mistral, Copilot oder DeepSeek. Das Format ist wichtiger als das Modell, also starte mit dem Prompt oben.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    
+    
+    <p>Alles passiert in deinem Browser: Dein Text wird nie hochgeladen.</p>
+    <p>KI zu Anki ist ein unabhängiges Tool und steht in keiner Verbindung zu Anki, AnkiWeb, OpenAI, Anthropic oder Google.</p>
+  </footer>
+</div>
+<script src="../assets/vendor/sql-wasm.js"></script>
+<script src="../assets/vendor/jszip.min.js"></script>
+<script src="../assets/parse.js?v=2"></script>
+<script src="../assets/apkg.js?v=2"></script>
+<script>window.I18N = {"status": "{n} Karten · erkanntes Format: {format}", "remove": "Diese Karte entfernen", "download": "{n} Karten herunterladen (.apkg)", "downloadEmpty": ".apkg herunterladen", "building": "Stapel wird erstellt…", "done": "Fertig: {n} Karten. Öffne die Datei, um sie in Anki zu importieren.", "error": "Die Datei konnte nicht erstellt werden. Lade die Seite neu und versuche es noch einmal.", "emptyPreview": "Deine Karten erscheinen hier, sobald du Text einfügst.", "unknown": "Keine Karten gefunden. Nutze den Prompt unten, damit die KI in einem Format antwortet, das das Tool lesen kann.", "copy": "Prompt kopieren", "copied": "Kopiert", "deckDefault": "KI-Karteikarten", "example": "Frage: Wie lautet die Formel für die kinetische Energie?\nAntwort: $E_{kin} = \\frac{1}{2}mv^2$, wobei *m* die Masse und *v* die Geschwindigkeit ist.\n\nFrage: Was sind die 3 Hauptteile eines Neurons?\nAntwort:\n- Dendriten\n- Zellkörper (Soma)\n- Axon\n\nFrage: Wofür steht **ATP**?\nAntwort: Adenosintriphosphat\n\n{{c1::Mitochondrien}} produzieren den größten Teil des {{c2::ATP}} der Zelle.", "formats": {"json": "JSON", "table": "Markdown-Tabelle", "qa": "Frage / Antwort", "cloze": "Lückentext", "tab": "Tabulatorgetrennt", "semicolon": "Semikolongetrennt", "pipe": "Mit senkrechtem Strich getrennt", "double-colon": "Vorderseite :: Rückseite", "csv": "CSV", "glossary-dash": "Begriff — Definition", "glossary-colon": "Begriff: Definition", "paragraphs": "Absätze"}}; window.ASSET_BASE = "../assets/";</script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

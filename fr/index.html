@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IA vers Anki — transformez les flashcards ChatGPT en paquet Anki</title>
+<meta name="description" content="Collez les flashcards générées par ChatGPT, Claude ou Gemini et téléchargez un paquet Anki (.apkg) propre : formules, textes à trous et tags corrigés. Gratuit, sans compte.">
+<link rel="canonical" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/">
+<link rel="alternate" hreflang="en" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<link rel="alternate" hreflang="fr" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/">
+<link rel="alternate" hreflang="es" href="https://jaulentmart-hash.github.io/ai-to-anki/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://jaulentmart-hash.github.io/ai-to-anki/pt/">
+<link rel="alternate" hreflang="de" href="https://jaulentmart-hash.github.io/ai-to-anki/de/">
+<link rel="alternate" hreflang="it" href="https://jaulentmart-hash.github.io/ai-to-anki/it/">
+<link rel="alternate" hreflang="x-default" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IA vers Anki — transformez les flashcards ChatGPT en paquet Anki">
+<meta property="og:description" content="Collez les flashcards générées par ChatGPT, Claude ou Gemini et téléchargez un paquet Anki (.apkg) propre : formules, textes à trous et tags corrigés. Gratuit, sans compte.">
+<meta property="og:url" content="https://jaulentmart-hash.github.io/ai-to-anki/fr/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "IA vers Anki", "url": "https://jaulentmart-hash.github.io/ai-to-anki/fr/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "fr", "description": "Collez les flashcards générées par ChatGPT, Claude ou Gemini et téléchargez un paquet Anki (.apkg) propre : formules, textes à trous et tags corrigés. Gratuit, sans compte.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "L'outil est-il gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Pas de compte, pas de limite de cartes, pas de filigrane."}}, {"@type": "Question", "name": "Mon texte est-il envoyé sur un serveur ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le paquet est créé dans votre navigateur, sur votre appareil. Rien de ce que vous collez ne quitte votre ordinateur ou votre téléphone."}}, {"@type": "Question", "name": "Pourquoi mes formules affichent-elles des dollars dans Anki ?", "acceptedAnswer": {"@type": "Answer", "text": "Le MathJax d'Anki ne lit que \\( … \\) et \\[ … \\], alors que les IA écrivent souvent $…$. L'outil les convertit pour vous et laisse les prix comme $5 intacts."}}, {"@type": "Question", "name": "Ça marche sur téléphone ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Ouvrez le fichier .apkg avec AnkiDroid sur Android ou AnkiMobile sur iPhone et iPad. Sur ordinateur, double-cliquez dessus pour l'ouvrir dans Anki."}}, {"@type": "Question", "name": "Puis-je créer des cartes à trous ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Gardez la syntaxe {{c1::…}} : chaque ligne qui en contient devient une note à trous, avec une carte par numéro."}}, {"@type": "Question", "name": "Quelle IA donne les meilleurs résultats ?", "acceptedAnswer": {"@type": "Answer", "text": "Toutes conviennent : ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. Le format compte plus que le modèle, alors commencez par le prompt ci-dessus."}}]}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../fr/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IA vers Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../" lang="en">English</a><a href="../fr/" aria-current="page" lang="fr">Français</a><a href="../es/" lang="es">Español</a><a href="../pt/" lang="pt-BR">Português</a><a href="../de/" lang="de">Deutsch</a><a href="../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Transformez les flashcards de l&#x27;IA en paquet Anki, en un clic</h1>
+    <p>Collez ce que ChatGPT, Claude ou Gemini a écrit. Récupérez un fichier .apkg propre, avec des formules qui s&#x27;affichent, des textes à trous et des tags. Gratuit, sans compte.</p>
+    <ul class="badges"><li>Gratuit, sans inscription</li><li>Tout se passe dans votre navigateur</li><li>Formules et textes à trous corrigés</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>Collez la réponse de l&#x27;IA</h2>
+        <div><button type="button" class="linkbtn" id="example">Voir un exemple</button><button type="button" class="linkbtn" id="clear">Effacer</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="Collez la réponse de l&#x27;IA" placeholder="Question : Quel organite produit l&#x27;ATP ?
+Réponse : La mitochondrie
+
+Question : …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Nom du paquet<input type="text" id="deck" placeholder="Flashcards IA" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (facultatif)<input type="text" id="tags" placeholder="biologie chapitre-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>Convertir les formules $…$ au format Anki</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Créer aussi les cartes inversées (verso → recto)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Vérifiez vos cartes</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>Télécharger le .apkg</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">Sur ordinateur, double-cliquez sur le fichier. Sur téléphone, ouvrez-le avec AnkiDroid ou AnkiMobile.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>Le prompt qui donne des cartes propres</h2>
+    <p>Collez-le dans ChatGPT, Claude ou une autre IA, puis ajoutez vos notes. L&#x27;IA répondra dans un format que l&#x27;outil lit parfaitement.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Transforme les notes ci-dessous en flashcards.
+Règles :
+- Une carte par bloc, avec une ligne vide entre deux cartes.
+- Écris chaque carte exactement ainsi :
+Question : la question
+Réponse : la réponse
+- Réponses courtes : une seule idée par carte.
+- Écris les formules avec $...$.
+- Pour une carte à trous, écris une seule ligne avec la partie cachée sous la forme {{c1::partie cachée}}, sans « Question : » ni « Réponse : ».
+
+Notes :
+[colle tes notes ici]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Copier le prompt</button>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Comment ça marche</h2>
+    <ol class="steps"><li><h3>Demandez à votre IA</h3><p>Utilisez le prompt ci-dessus, puis collez vos notes, la transcription d&#x27;un cours ou un chapitre.</p></li><li><h3>Collez la réponse ici</h3><p>L&#x27;outil lit les cartes, corrige les formules et affiche un aperçu. Supprimez les cartes inutiles.</p></li><li><h3>Importez dans Anki</h3><p>Téléchargez le fichier .apkg et ouvrez-le. Votre paquet apparaît dans Anki, prêt à réviser.</p></li></ol>
+  </section>
+
+  <section class="block">
+    <h2>Formats reconnus</h2>
+    <ul class="formats"><li>Blocs Question / Réponse</li><li>Tableaux Markdown</li><li>Textes à trous {{c1::…}}</li><li>CSV et tabulations</li><li>Points-virgules ou barres</li><li>Listes terme — définition</li><li>JSON</li><li>Questions en 6 langues</li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Questions fréquentes</h2>
+    <div class="faq"><details><summary>L&#x27;outil est-il gratuit ?</summary><p>Oui. Pas de compte, pas de limite de cartes, pas de filigrane.</p></details><details><summary>Mon texte est-il envoyé sur un serveur ?</summary><p>Non. Le paquet est créé dans votre navigateur, sur votre appareil. Rien de ce que vous collez ne quitte votre ordinateur ou votre téléphone.</p></details><details><summary>Pourquoi mes formules affichent-elles des dollars dans Anki ?</summary><p>Le MathJax d&#x27;Anki ne lit que \( … \) et \[ … \], alors que les IA écrivent souvent $…$. L&#x27;outil les convertit pour vous et laisse les prix comme $5 intacts.</p></details><details><summary>Ça marche sur téléphone ?</summary><p>Oui. Ouvrez le fichier .apkg avec AnkiDroid sur Android ou AnkiMobile sur iPhone et iPad. Sur ordinateur, double-cliquez dessus pour l&#x27;ouvrir dans Anki.</p></details><details><summary>Puis-je créer des cartes à trous ?</summary><p>Oui. Gardez la syntaxe {{c1::…}} : chaque ligne qui en contient devient une note à trous, avec une carte par numéro.</p></details><details><summary>Quelle IA donne les meilleurs résultats ?</summary><p>Toutes conviennent : ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. Le format compte plus que le modèle, alors commencez par le prompt ci-dessus.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    
+    
+    <p>Tout se passe dans votre navigateur : votre texte n&#x27;est jamais envoyé.</p>
+    <p>IA vers Anki est un outil indépendant, sans lien avec Anki, AnkiWeb, OpenAI, Anthropic ou Google.</p>
+  </footer>
+</div>
+<script src="../assets/vendor/sql-wasm.js"></script>
+<script src="../assets/vendor/jszip.min.js"></script>
+<script src="../assets/parse.js?v=2"></script>
+<script src="../assets/apkg.js?v=2"></script>
+<script>window.I18N = {"status": "{n} cartes · format détecté : {format}", "remove": "Supprimer cette carte", "download": "Télécharger {n} cartes (.apkg)", "downloadEmpty": "Télécharger le .apkg", "building": "Création du paquet…", "done": "C'est prêt : {n} cartes. Ouvrez le fichier pour l'importer dans Anki.", "error": "Le fichier n'a pas pu être créé. Rechargez la page et réessayez.", "emptyPreview": "Vos cartes apparaissent ici dès que vous collez du texte.", "unknown": "Aucune carte trouvée. Utilisez le prompt ci-dessous pour que l'IA réponde dans un format lisible par l'outil.", "copy": "Copier le prompt", "copied": "Copié", "deckDefault": "Flashcards IA", "example": "Question : Quelle est la formule de l'énergie cinétique ?\nRéponse : $E_c = \\frac{1}{2}mv^2$, où *m* est la masse et *v* la vitesse.\n\nQuestion : Quelles sont les 3 parties principales d'un neurone ?\nRéponse :\n- Les dendrites\n- Le corps cellulaire\n- L'axone\n\nQuestion : Que signifie **ATP** ?\nRéponse : Adénosine triphosphate\n\nLes {{c1::mitochondries}} produisent l'essentiel de l'{{c2::ATP}} de la cellule.", "formats": {"json": "JSON", "table": "Tableau Markdown", "qa": "Question / Réponse", "cloze": "Texte à trous", "tab": "Séparé par tabulations", "semicolon": "Séparé par points-virgules", "pipe": "Séparé par barres", "double-colon": "Recto :: Verso", "csv": "CSV", "glossary-dash": "Terme — définition", "glossary-colon": "Terme : définition", "paragraphs": "Paragraphes"}}; window.ASSET_BASE = "../assets/";</script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>

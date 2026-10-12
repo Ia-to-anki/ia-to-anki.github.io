@@ -1,0 +1,28 @@
+{
+  "title": "Anki shows dollar signs instead of math? Here's the fix",
+  "description": "Anki's MathJax doesn't read $…$. Learn why AI-generated formulas show raw dollar signs in Anki and convert them to \\( … \\) automatically, for free.",
+  "h1": "Why Anki shows dollar signs instead of your formulas",
+  "sub": "AI tools write math as $…$. Anki's MathJax only understands \\( … \\) and \\[ … \\]. Paste your cards above and the formulas are converted before they reach Anki.",
+  "nav": "Fix $ math in Anki",
+  "sections": [
+    {
+      "h2": "The cause",
+      "paragraphs": [
+        "Anki renders math with MathJax, using \\( … \\) for inline formulas and \\[ … \\] for formulas on their own line. Dollar signs are not enabled by default, so a card that contains $E = mc^2$ shows the dollars and the raw code.",
+        "ChatGPT, Claude and most other assistants write math with dollar signs because that is the usual Markdown convention. The mismatch is the whole problem."
+      ]
+    },
+    {
+      "h2": "The fix, before import",
+      "paragraphs": [
+        "Paste the AI's answer into the tool on this page with the math option ticked. Inline $…$ becomes \\( … \\) and $$…$$ becomes \\[ … \\]. Amounts such as $5 or $10 are left alone, because a price is not a formula.",
+        "For cards already in your collection, Anki's Find and Replace can work with regular expressions. It is powerful but a wrong pattern can damage many notes at once, so back up your collection before trying it."
+      ],
+      "list": [
+        "Inline: $x^2$ → \\(x^2\\)",
+        "Display: $$\\int_0^1 x\\,dx$$ → \\[\\int_0^1 x\\,dx\\]",
+        "Already correct \\( … \\) formulas are kept as they are."
+      ]
+    }
+  ]
+}

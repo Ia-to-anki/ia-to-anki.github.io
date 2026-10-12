@@ -1,0 +1,27 @@
+{
+  "title": "Claude to Anki — turn Claude flashcards into an Anki deck",
+  "description": "Paste the flashcards Claude wrote and download a ready-to-import Anki deck (.apkg). Math, cloze cards and tags are fixed automatically. Free, no account.",
+  "h1": "Claude to Anki: from Claude's answer to a deck in one click",
+  "sub": "Claude writes good flashcards. This page turns its answer into a clean .apkg file you can open in Anki, AnkiDroid or AnkiMobile.",
+  "nav": "Claude to Anki",
+  "sections": [
+    {
+      "h2": "How to get flashcards from Claude",
+      "paragraphs": [
+        "Start a new chat, paste the prompt from this page, then paste your notes, a lecture transcript or a chapter. Ask for one idea per card: short cards are easier to review and easier to fix.",
+        "When Claude has answered, use the copy button under its message and paste the whole answer into the box above. You don't need to remove the introduction or the closing sentence: the tool ignores text that isn't a card."
+      ],
+      "list": [
+        "Long document: split it into chapters and make one deck per chapter.",
+        "Want fill-in-the-blank cards? Ask Claude to write them with {{c1::…}}.",
+        "Formulas: ask for $…$; the tool converts them to Anki's \\( … \\) format."
+      ]
+    },
+    {
+      "h2": "Why not copy the cards into Anki by hand?",
+      "paragraphs": [
+        "Copying 50 cards one by one takes longer than generating them. Importing a text file into Anki works, but you have to choose a separator, map the fields and fix the formulas yourself. Here the deck, the note types and the formulas are handled for you, and the file opens on every Anki app."
+      ]
+    }
+  ]
+}

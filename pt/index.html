@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IA para Anki — transforme os flashcards do ChatGPT em um baralho do Anki</title>
+<meta name="description" content="Cole os flashcards gerados pelo ChatGPT, Claude ou Gemini e baixe um baralho do Anki (.apkg) limpo: fórmulas, cloze e tags corrigidos. Grátis, sem conta.">
+<link rel="canonical" href="https://jaulentmart-hash.github.io/ai-to-anki/pt/">
+<link rel="alternate" hreflang="en" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<link rel="alternate" hreflang="fr" href="https://jaulentmart-hash.github.io/ai-to-anki/fr/">
+<link rel="alternate" hreflang="es" href="https://jaulentmart-hash.github.io/ai-to-anki/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://jaulentmart-hash.github.io/ai-to-anki/pt/">
+<link rel="alternate" hreflang="de" href="https://jaulentmart-hash.github.io/ai-to-anki/de/">
+<link rel="alternate" hreflang="it" href="https://jaulentmart-hash.github.io/ai-to-anki/it/">
+<link rel="alternate" hreflang="x-default" href="https://jaulentmart-hash.github.io/ai-to-anki/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IA para Anki — transforme os flashcards do ChatGPT em um baralho do Anki">
+<meta property="og:description" content="Cole os flashcards gerados pelo ChatGPT, Claude ou Gemini e baixe um baralho do Anki (.apkg) limpo: fórmulas, cloze e tags corrigidos. Grátis, sem conta.">
+<meta property="og:url" content="https://jaulentmart-hash.github.io/ai-to-anki/pt/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "IA para Anki", "url": "https://jaulentmart-hash.github.io/ai-to-anki/pt/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "pt-BR", "description": "Cole os flashcards gerados pelo ChatGPT, Claude ou Gemini e baixe um baralho do Anki (.apkg) limpo: fórmulas, cloze e tags corrigidos. Grátis, sem conta.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "pt-BR", "mainEntity": [{"@type": "Question", "name": "É grátis?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Sem conta, sem limite de cartões e sem marca d'água."}}, {"@type": "Question", "name": "Meu texto é enviado para um servidor?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O baralho é criado dentro do seu navegador, no seu aparelho. Nada do que você cola sai do seu computador ou celular."}}, {"@type": "Question", "name": "Por que minhas fórmulas aparecem com cifrões no Anki?", "acceptedAnswer": {"@type": "Answer", "text": "O MathJax do Anki só lê \\( … \\) e \\[ … \\], enquanto as IAs costumam escrever $…$. A ferramenta converte para você e deixa preços como $5 intactos."}}, {"@type": "Question", "name": "Funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Abra o arquivo .apkg com o AnkiDroid no Android ou o AnkiMobile no iPhone e iPad. No computador, clique duas vezes para abri-lo no Anki."}}, {"@type": "Question", "name": "Posso criar cartões cloze?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Mantenha a sintaxe {{c1::…}}: cada linha que a contém vira uma nota cloze, com um cartão por número."}}, {"@type": "Question", "name": "Qual IA funciona melhor?", "acceptedAnswer": {"@type": "Answer", "text": "Qualquer uma: ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. O formato importa mais que o modelo, então comece pelo prompt acima."}}]}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../pt/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IA para Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../" lang="en">English</a><a href="../fr/" lang="fr">Français</a><a href="../es/" lang="es">Español</a><a href="../pt/" aria-current="page" lang="pt-BR">Português</a><a href="../de/" lang="de">Deutsch</a><a href="../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Transforme os flashcards da IA em um baralho do Anki com um clique</h1>
+    <p>Cole o que o ChatGPT, o Claude ou o Gemini escreveu. Receba um arquivo .apkg limpo, com fórmulas que funcionam, cartões cloze e tags. Grátis e sem conta.</p>
+    <ul class="badges"><li>Grátis, sem cadastro</li><li>Funciona no seu navegador</li><li>Fórmulas e cloze corrigidos</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>Cole a resposta da IA</h2>
+        <div><button type="button" class="linkbtn" id="example">Ver um exemplo</button><button type="button" class="linkbtn" id="clear">Limpar</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="Cole a resposta da IA" placeholder="Pergunta: Qual organela produz ATP?
+Resposta: A mitocôndria
+
+Pergunta: …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Nome do baralho<input type="text" id="deck" placeholder="Flashcards IA" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (opcional)<input type="text" id="tags" placeholder="biologia capítulo-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>Converter as fórmulas $…$ para o formato do Anki</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Criar também cartões invertidos (verso → frente)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Confira seus cartões</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>Baixar .apkg</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">No computador, clique duas vezes no arquivo. No celular, abra-o com o AnkiDroid ou o AnkiMobile.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>O prompt que gera cartões limpos</h2>
+    <p>Cole no ChatGPT, no Claude ou em outra IA e depois adicione suas anotações. A IA vai responder em um formato que a ferramenta lê perfeitamente.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Transforme as anotações abaixo em flashcards.
+Regras:
+- Um cartão por bloco, com uma linha em branco entre os cartões.
+- Escreva cada cartão exatamente assim:
+Pergunta: a pergunta
+Resposta: a resposta
+- Respostas curtas: uma ideia por cartão.
+- Escreva as fórmulas com $...$.
+- Para um cartão de lacuna, escreva uma única linha com a parte escondida como {{c1::parte escondida}}, sem &quot;Pergunta:&quot; nem &quot;Resposta:&quot;.
+
+Anotações:
+[cole suas anotações aqui]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Copiar o prompt</button>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Como funciona</h2>
+    <ol class="steps"><li><h3>Peça para a sua IA</h3><p>Use o prompt acima e cole suas anotações, a transcrição de uma aula ou um capítulo.</p></li><li><h3>Cole a resposta aqui</h3><p>A ferramenta lê os cartões, corrige as fórmulas e mostra uma prévia. Remova os que não quiser.</p></li><li><h3>Importe no Anki</h3><p>Baixe o arquivo .apkg e abra-o. Seu baralho aparece no Anki, pronto para estudar.</p></li></ol>
+  </section>
+
+  <section class="block">
+    <h2>Formatos que ela entende</h2>
+    <ul class="formats"><li>Blocos Pergunta / Resposta</li><li>Tabelas Markdown</li><li>Cloze {{c1::…}}</li><li>CSV e tabulação</li><li>Ponto e vírgula ou barras</li><li>Listas termo — definição</li><li>JSON</li><li>Perguntas em 6 idiomas</li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq"><details><summary>É grátis?</summary><p>Sim. Sem conta, sem limite de cartões e sem marca d&#x27;água.</p></details><details><summary>Meu texto é enviado para um servidor?</summary><p>Não. O baralho é criado dentro do seu navegador, no seu aparelho. Nada do que você cola sai do seu computador ou celular.</p></details><details><summary>Por que minhas fórmulas aparecem com cifrões no Anki?</summary><p>O MathJax do Anki só lê \( … \) e \[ … \], enquanto as IAs costumam escrever $…$. A ferramenta converte para você e deixa preços como $5 intactos.</p></details><details><summary>Funciona no celular?</summary><p>Sim. Abra o arquivo .apkg com o AnkiDroid no Android ou o AnkiMobile no iPhone e iPad. No computador, clique duas vezes para abri-lo no Anki.</p></details><details><summary>Posso criar cartões cloze?</summary><p>Sim. Mantenha a sintaxe {{c1::…}}: cada linha que a contém vira uma nota cloze, com um cartão por número.</p></details><details><summary>Qual IA funciona melhor?</summary><p>Qualquer uma: ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. O formato importa mais que o modelo, então comece pelo prompt acima.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    
+    
+    <p>Tudo acontece no seu navegador: seu texto nunca é enviado.</p>
+    <p>IA para Anki é uma ferramenta independente, sem relação com Anki, AnkiWeb, OpenAI, Anthropic ou Google.</p>
+  </footer>
+</div>
+<script src="../assets/vendor/sql-wasm.js"></script>
+<script src="../assets/vendor/jszip.min.js"></script>
+<script src="../assets/parse.js?v=2"></script>
+<script src="../assets/apkg.js?v=2"></script>
+<script>window.I18N = {"status": "{n} cartões · formato detectado: {format}", "remove": "Remover este cartão", "download": "Baixar {n} cartões (.apkg)", "downloadEmpty": "Baixar .apkg", "building": "Criando seu baralho…", "done": "Pronto: {n} cartões. Abra o arquivo para importá-lo no Anki.", "error": "Não foi possível criar o arquivo. Recarregue a página e tente de novo.", "emptyPreview": "Seus cartões aparecem aqui assim que você colar o texto.", "unknown": "Nenhum cartão encontrado. Use o prompt abaixo para que a IA responda em um formato que a ferramenta consiga ler.", "copy": "Copiar o prompt", "copied": "Copiado", "deckDefault": "Flashcards IA", "example": "Pergunta: Qual é a fórmula da energia cinética?\nResposta: $E_c = \\frac{1}{2}mv^2$, onde *m* é a massa e *v* a velocidade.\n\nPergunta: Quais são as 3 partes principais de um neurônio?\nResposta:\n- Dendritos\n- Corpo celular\n- Axônio\n\nPergunta: O que significa **ATP**?\nResposta: Adenosina trifosfato\n\nAs {{c1::mitocôndrias}} produzem a maior parte do {{c2::ATP}} da célula.", "formats": {"json": "JSON", "table": "Tabela Markdown", "qa": "Pergunta / Resposta", "cloze": "Cloze", "tab": "Separado por tabulação", "semicolon": "Separado por ponto e vírgula", "pipe": "Separado por barras", "double-colon": "Frente :: Verso", "csv": "CSV", "glossary-dash": "Termo — definição", "glossary-colon": "Termo: definição", "paragraphs": "Parágrafos"}}; window.ASSET_BASE = "../assets/";</script>
+<script src="../assets/app.js?v=2"></script>
+</body>
+</html>
