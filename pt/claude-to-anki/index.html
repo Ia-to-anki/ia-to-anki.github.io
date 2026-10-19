@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude para Anki: transforme os flashcards em um baralho</title>
+<meta name="description" content="Claude para Anki: cole os flashcards que o Claude escreveu e baixe um baralho do Anki (.apkg) pronto para importar, com fórmulas e cloze corrigidos. Grátis.">
+<link rel="canonical" href="https://ia-to-anki.github.io/pt/claude-to-anki/">
+<link rel="alternate" hreflang="en" href="https://ia-to-anki.github.io/claude-to-anki/">
+<link rel="alternate" hreflang="fr" href="https://ia-to-anki.github.io/fr/claude-to-anki/">
+<link rel="alternate" hreflang="es" href="https://ia-to-anki.github.io/es/claude-to-anki/">
+<link rel="alternate" hreflang="pt-BR" href="https://ia-to-anki.github.io/pt/claude-to-anki/">
+<link rel="alternate" hreflang="x-default" href="https://ia-to-anki.github.io/claude-to-anki/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude para Anki: transforme os flashcards em um baralho">
+<meta property="og:description" content="Claude para Anki: cole os flashcards que o Claude escreveu e baixe um baralho do Anki (.apkg) pronto para importar, com fórmulas e cloze corrigidos. Grátis.">
+<meta property="og:url" content="https://ia-to-anki.github.io/pt/claude-to-anki/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#2B56D9">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css?v=3">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Claude para Anki: da resposta do Claude a um baralho em um clique", "description": "Claude para Anki: cole os flashcards que o Claude escreveu e baixe um baralho do Anki (.apkg) pronto para importar, com fórmulas e cloze corrigidos. Grátis.", "inLanguage": "pt-BR", "url": "https://ia-to-anki.github.io/pt/claude-to-anki/", "dateModified": "2026-10-19"}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "IA para Anki", "url": "https://ia-to-anki.github.io/pt/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web browser)", "inLanguage": "pt-BR", "description": "Cole os flashcards gerados pelo ChatGPT, Claude ou Gemini e baixe um baralho do Anki (.apkg) limpo: fórmulas, cloze e tags corrigidos. Grátis, sem conta.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}]</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../pt/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="22" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="10" width="22" height="16" rx="3" fill="var(--accent)"/><path d="M12 18h9m-3-3 3 3-3 3" fill="none" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IA para Anki</span></a>
+    <nav class="langs" aria-label="Language"><a href="../../claude-to-anki/" lang="en">English</a><a href="../../fr/claude-to-anki/" lang="fr">Français</a><a href="../../es/claude-to-anki/" lang="es">Español</a><a href="../../pt/claude-to-anki/" aria-current="page" lang="pt-BR">Português</a><a href="../../de/" lang="de">Deutsch</a><a href="../../it/" lang="it">Italiano</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Claude para Anki: da resposta do Claude a um baralho em um clique</h1>
+    <p>O Claude escreve bons flashcards, mas o Anki não consegue ler uma resposta de chat. Cole-a acima e receba um arquivo .apkg que abre no Anki, no AnkiDroid ou no AnkiMobile.</p>
+    <ul class="badges"><li>Grátis, sem cadastro</li><li>Funciona no seu navegador</li><li>Fórmulas e cloze corrigidos</li><li>Anki, AnkiDroid, AnkiMobile</li></ul>
+  </section>
+
+  <main class="tool">
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">01</span>Cole a resposta da IA</h2>
+        <div><button type="button" class="linkbtn" id="example">Ver um exemplo</button><button type="button" class="linkbtn" id="clear">Limpar</button></div>
+      </div>
+      <textarea id="input" spellcheck="false" aria-label="Cole a resposta da IA" placeholder="Pergunta: Qual organela produz ATP?
+Resposta: A mitocôndria
+
+Pergunta: …"></textarea>
+      <div class="opts">
+        <label class="field" for="deck">Nome do baralho<input type="text" id="deck" placeholder="Flashcards IA" autocomplete="off"></label>
+        <label class="field" for="tags">Tags (opcional)<input type="text" id="tags" placeholder="biologia capítulo-3" autocomplete="off"></label>
+        <div class="checks">
+          <label for="math"><input type="checkbox" id="math" checked>Converter as fórmulas $…$ para o formato do Anki</label>
+          <label for="reversed"><input type="checkbox" id="reversed">Criar também cartões invertidos (verso → frente)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2><span class="step">02</span>Confira seus cartões</h2>
+        <span class="status" id="status" aria-live="polite"></span>
+      </div>
+      <div class="cards" id="cards"></div>
+      <div class="dl">
+        <button type="button" class="btn" id="download" disabled>Baixar .apkg</button>
+        <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="hint">No computador, clique duas vezes no arquivo. No celular, abra-o com o AnkiDroid ou o AnkiMobile.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="block" id="prompt">
+    <h2>O prompt que gera cartões limpos</h2>
+    <p>Cole no ChatGPT, no Claude ou em outra IA e depois adicione suas anotações. A IA vai responder em um formato que a ferramenta lê perfeitamente.</p>
+    <div class="prompt">
+      <pre id="prompt-text">Transforme as anotações abaixo em flashcards.
+Regras:
+- Um cartão por bloco, com uma linha em branco entre os cartões.
+- Escreva cada cartão exatamente assim:
+Pergunta: a pergunta
+Resposta: a resposta
+- Respostas curtas: uma ideia por cartão.
+- Escreva as fórmulas com $...$.
+- Para um cartão de lacuna, escreva uma única linha com a parte escondida como {{c1::parte escondida}}, sem &quot;Pergunta:&quot; nem &quot;Resposta:&quot;.
+
+Anotações:
+[cole suas anotações aqui]</pre>
+      <button type="button" class="copy" data-copy="prompt-text">Copiar o prompt</button>
+    </div>
+  </section>
+<section class="block"><h2>Como pedir flashcards bem formatados ao Claude</h2><p>Abra uma conversa nova com o Claude e cole o prompt desta página, seguido das suas anotações, da transcrição de uma aula ou de um capítulo do livro. O prompt pede um formato simples, &quot;Pergunta:&quot; e depois &quot;Resposta:&quot;, com uma linha em branco entre um cartão e outro. É o formato que a ferramenta lê com mais facilidade.</p><p>Peça uma única ideia por cartão. Um cartão curto é revisado mais rápido e, se o Claude errar, você só precisa corrigir ou apagar uma linha. Se o material for longo, trabalhe por capítulos: as respostas vêm completas e você pode criar um baralho para cada capítulo.</p><ul class="plain"><li>Cartões de lacuna: peça ao Claude que escreva a parte escondida como {{c1::…}}, em uma única linha.</li><li>Fórmulas: peça que venham entre $…$; a ferramenta converte para o formato \( … \) que o Anki exibe.</li><li>Tags: digite-as no campo &quot;Tags&quot; antes de baixar e elas valem para todos os cartões.</li></ul></section><section class="block"><h2>Colar a resposta e conferir os cartões</h2><p>Quando o Claude terminar, use o botão de copiar logo abaixo da mensagem dele e cole a resposta inteira na caixa no alto da página. Não precisa apagar a frase de introdução nem a de encerramento: o texto que não é cartão é ignorado.</p><p>A pré-visualização mostra cada cartão do jeito que será importado, junto com o formato detectado. Se o Claude respondeu com uma tabela Markdown, uma lista &quot;termo — definição&quot;, CSV ou JSON, a ferramenta também reconhece. O negrito e o itálico do Markdown viram negrito e itálico de verdade, e perguntas repetidas são mantidas uma vez só. Remova com um clique os cartões que não servem, escolha o nome do baralho e baixe o arquivo .apkg.</p></section><section class="block"><h2>Importar no Anki</h2><p>No computador, clique duas vezes no arquivo: o Anki abre e cria o baralho. No Android, abra com o AnkiDroid; no iPhone e no iPad, com o AnkiMobile. Se você marcar a opção de cartões invertidos, cada cartão básico gera também um cartão no sentido contrário, o que ajuda muito com vocabulário.</p><p>Tudo acontece no seu navegador: o texto que você cola não é enviado a nenhum servidor.</p></section><section class="block"><h2>Por que não copiar os cartões à mão?</h2><p>Copiar cinquenta cartões um por um demora mais do que gerá-los. Importar um arquivo de texto no Anki funciona, mas você precisa escolher o separador, associar os campos e consertar sozinho as fórmulas que aparecem com cifrões. Aqui, o baralho, os tipos de nota e as fórmulas são resolvidos para você.</p></section>
+
+  <section class="block">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq"><details><summary>É grátis?</summary><p>Sim. Sem conta, sem limite de cartões e sem marca d&#x27;água.</p></details><details><summary>Meu texto é enviado para um servidor?</summary><p>Não. O baralho é criado dentro do seu navegador, no seu aparelho. Nada do que você cola sai do seu computador ou celular.</p></details><details><summary>Por que minhas fórmulas aparecem com cifrões no Anki?</summary><p>O MathJax do Anki só lê \( … \) e \[ … \], enquanto as IAs costumam escrever $…$. A ferramenta converte para você e deixa preços como $5 intactos.</p></details><details><summary>Funciona no celular?</summary><p>Sim. Abra o arquivo .apkg com o AnkiDroid no Android ou o AnkiMobile no iPhone e iPad. No computador, clique duas vezes para abri-lo no Anki.</p></details><details><summary>Posso criar cartões cloze?</summary><p>Sim. Mantenha a sintaxe {{c1::…}}: cada linha que a contém vira uma nota cloze, com um cartão por número.</p></details><details><summary>Qual IA funciona melhor?</summary><p>Qualquer uma: ChatGPT, Claude, Gemini, Mistral, Copilot ou DeepSeek. O formato importa mais que o modelo, então comece pelo prompt acima.</p></details></div>
+  </section>
+
+  <footer class="foot">
+    
+    <p><a href="../../pt/">IA para Anki</a></p>
+    <p>Tudo acontece no seu navegador: seu texto nunca é enviado.</p>
+    <p>IA para Anki é uma ferramenta independente, sem relação com Anki, AnkiWeb, OpenAI, Anthropic ou Google.</p>
+  </footer>
+</div>
+<script src="../../assets/vendor/sql-wasm.js"></script>
+<script src="../../assets/vendor/jszip.min.js"></script>
+<script src="../../assets/parse.js?v=3"></script>
+<script src="../../assets/apkg.js?v=3"></script>
+<script>window.I18N = {"status": "{n} cartões · formato detectado: {format}", "remove": "Remover este cartão", "download": "Baixar {n} cartões (.apkg)", "downloadEmpty": "Baixar .apkg", "building": "Criando seu baralho…", "done": "Pronto: {n} cartões. Abra o arquivo para importá-lo no Anki.", "error": "Não foi possível criar o arquivo. Recarregue a página e tente de novo.", "emptyPreview": "Seus cartões aparecem aqui assim que você colar o texto.", "unknown": "Nenhum cartão encontrado. Use o prompt abaixo para que a IA responda em um formato que a ferramenta consiga ler.", "copy": "Copiar o prompt", "copied": "Copiado", "deckDefault": "Flashcards IA", "example": "Pergunta: Qual é a fórmula da energia cinética?\nResposta: $E_c = \\frac{1}{2}mv^2$, onde *m* é a massa e *v* a velocidade.\n\nPergunta: Quais são as 3 partes principais de um neurônio?\nResposta:\n- Dendritos\n- Corpo celular\n- Axônio\n\nPergunta: O que significa **ATP**?\nResposta: Adenosina trifosfato\n\nAs {{c1::mitocôndrias}} produzem a maior parte do {{c2::ATP}} da célula.", "formats": {"json": "JSON", "table": "Tabela Markdown", "qa": "Pergunta / Resposta", "cloze": "Cloze", "tab": "Separado por tabulação", "semicolon": "Separado por ponto e vírgula", "pipe": "Separado por barras", "double-colon": "Frente :: Verso", "csv": "CSV", "glossary-dash": "Termo — definição", "glossary-colon": "Termo: definição", "paragraphs": "Parágrafos"}}; window.ASSET_BASE = "../../assets/";</script>
+<script src="../../assets/app.js?v=3"></script>
+</body>
+</html>

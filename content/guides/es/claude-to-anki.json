@@ -1,0 +1,41 @@
+{
+  "title": "Claude a Anki: convierte sus flashcards en un mazo de Anki",
+  "description": "Claude a Anki: pega las flashcards que escribió Claude y descarga un mazo de Anki (.apkg) listo para importar, con fórmulas y cloze corregidos. Gratis.",
+  "h1": "Claude a Anki: de la respuesta de Claude a un mazo en un clic",
+  "sub": "Claude escribe buenas flashcards, pero Anki no sabe leer una respuesta de chat. Pégala arriba y obtendrás un archivo .apkg que se abre en Anki, AnkiDroid o AnkiMobile.",
+  "nav": "Claude a Anki",
+  "sections": [
+    {
+      "h2": "Cómo pedirle a Claude flashcards limpias",
+      "paragraphs": [
+        "Abre una conversación nueva con Claude y pega el prompt de esta página, seguido de tus apuntes, la transcripción de una clase o un capítulo del libro. El prompt pide un formato sencillo, «Pregunta:» y luego «Respuesta:», con una línea en blanco entre tarjeta y tarjeta. Es el formato que la herramienta lee con más facilidad.",
+        "Pide una sola idea por tarjeta. Una tarjeta corta se repasa más rápido y, si Claude se equivoca, solo tienes que corregir o borrar una línea. Si el documento es largo, trabaja por capítulos: las respuestas salen completas y puedes crear un mazo por capítulo."
+      ],
+      "list": [
+        "Tarjetas de completar: pide a Claude que escriba la parte oculta como {{c1::…}}, en una sola línea.",
+        "Fórmulas: pídelas entre $…$; la herramienta las convierte al formato \\( … \\) que muestra Anki.",
+        "Etiquetas: escríbelas en el campo «Etiquetas» antes de descargar y se aplican a todas las tarjetas."
+      ]
+    },
+    {
+      "h2": "Pegar la respuesta y revisar las tarjetas",
+      "paragraphs": [
+        "Cuando Claude termine, usa el botón de copiar que aparece bajo su mensaje y pega la respuesta completa en el cuadro de arriba. No hace falta quitar la frase de introducción ni la despedida: el texto que no es una tarjeta se ignora.",
+        "La vista previa muestra cada tarjeta tal como se importará, junto con el formato detectado. Si Claude respondió con una tabla Markdown, una lista «término — definición», CSV o JSON, la herramienta también lo reconoce. La negrita y la cursiva de Markdown se convierten en negrita y cursiva reales, y las preguntas repetidas se guardan una sola vez. Elimina con un clic las tarjetas que no te sirvan, elige el nombre del mazo y descarga el archivo .apkg."
+      ]
+    },
+    {
+      "h2": "Importar en Anki",
+      "paragraphs": [
+        "En el ordenador, haz doble clic en el archivo: Anki lo abre y crea el mazo. En Android, ábrelo con AnkiDroid; en iPhone y iPad, con AnkiMobile. Si marcas la opción de tarjetas invertidas, cada tarjeta básica genera también otra en sentido contrario, algo muy útil para el vocabulario.",
+        "Todo ocurre en tu navegador: el texto que pegas no se envía a ningún servidor."
+      ]
+    },
+    {
+      "h2": "¿Por qué no copiar las tarjetas a mano?",
+      "paragraphs": [
+        "Copiar cincuenta tarjetas una por una lleva más tiempo que generarlas. Importar un archivo de texto en Anki funciona, pero tienes que elegir el separador, asignar los campos y arreglar tú mismo las fórmulas que aparecen con signos de dólar. Aquí el mazo, los tipos de nota y las fórmulas se gestionan por ti."
+      ]
+    }
+  ]
+}

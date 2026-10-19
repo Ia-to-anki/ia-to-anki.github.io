@@ -1,0 +1,41 @@
+{
+  "title": "Claude para Anki: transforme os flashcards em um baralho",
+  "description": "Claude para Anki: cole os flashcards que o Claude escreveu e baixe um baralho do Anki (.apkg) pronto para importar, com fórmulas e cloze corrigidos. Grátis.",
+  "h1": "Claude para Anki: da resposta do Claude a um baralho em um clique",
+  "sub": "O Claude escreve bons flashcards, mas o Anki não consegue ler uma resposta de chat. Cole-a acima e receba um arquivo .apkg que abre no Anki, no AnkiDroid ou no AnkiMobile.",
+  "nav": "Claude para Anki",
+  "sections": [
+    {
+      "h2": "Como pedir flashcards bem formatados ao Claude",
+      "paragraphs": [
+        "Abra uma conversa nova com o Claude e cole o prompt desta página, seguido das suas anotações, da transcrição de uma aula ou de um capítulo do livro. O prompt pede um formato simples, \"Pergunta:\" e depois \"Resposta:\", com uma linha em branco entre um cartão e outro. É o formato que a ferramenta lê com mais facilidade.",
+        "Peça uma única ideia por cartão. Um cartão curto é revisado mais rápido e, se o Claude errar, você só precisa corrigir ou apagar uma linha. Se o material for longo, trabalhe por capítulos: as respostas vêm completas e você pode criar um baralho para cada capítulo."
+      ],
+      "list": [
+        "Cartões de lacuna: peça ao Claude que escreva a parte escondida como {{c1::…}}, em uma única linha.",
+        "Fórmulas: peça que venham entre $…$; a ferramenta converte para o formato \\( … \\) que o Anki exibe.",
+        "Tags: digite-as no campo \"Tags\" antes de baixar e elas valem para todos os cartões."
+      ]
+    },
+    {
+      "h2": "Colar a resposta e conferir os cartões",
+      "paragraphs": [
+        "Quando o Claude terminar, use o botão de copiar logo abaixo da mensagem dele e cole a resposta inteira na caixa no alto da página. Não precisa apagar a frase de introdução nem a de encerramento: o texto que não é cartão é ignorado.",
+        "A pré-visualização mostra cada cartão do jeito que será importado, junto com o formato detectado. Se o Claude respondeu com uma tabela Markdown, uma lista \"termo — definição\", CSV ou JSON, a ferramenta também reconhece. O negrito e o itálico do Markdown viram negrito e itálico de verdade, e perguntas repetidas são mantidas uma vez só. Remova com um clique os cartões que não servem, escolha o nome do baralho e baixe o arquivo .apkg."
+      ]
+    },
+    {
+      "h2": "Importar no Anki",
+      "paragraphs": [
+        "No computador, clique duas vezes no arquivo: o Anki abre e cria o baralho. No Android, abra com o AnkiDroid; no iPhone e no iPad, com o AnkiMobile. Se você marcar a opção de cartões invertidos, cada cartão básico gera também um cartão no sentido contrário, o que ajuda muito com vocabulário.",
+        "Tudo acontece no seu navegador: o texto que você cola não é enviado a nenhum servidor."
+      ]
+    },
+    {
+      "h2": "Por que não copiar os cartões à mão?",
+      "paragraphs": [
+        "Copiar cinquenta cartões um por um demora mais do que gerá-los. Importar um arquivo de texto no Anki funciona, mas você precisa escolher o separador, associar os campos e consertar sozinho as fórmulas que aparecem com cifrões. Aqui, o baralho, os tipos de nota e as fórmulas são resolvidos para você."
+      ]
+    }
+  ]
+}
